@@ -3,6 +3,7 @@ body {
   color: #ffffff;
   font-family:
     "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+  margin: 0 auto;
 }
 
 header {
@@ -15,6 +16,7 @@ h1 {
   text-shadow: #000000 0px 0px 10px;
   text-align: center;
   padding: 20px;
+  margin-top: 0;
 }
 
 h2 {
@@ -47,11 +49,16 @@ nav ul li {
   background-color: #ffffff;
   color: #ffffff;
   padding: 5px 10px;
+  margin: 0 0.5%;
   border: 5px solid #932c2c;
 }
 
+main {
+  margin: 0 2.5%;
+}
+
 footer {
-  background-color: #000000;
+  background-color: #551f1f;
   color: #ffffff;
   text-align: center;
   padding: 10px;
@@ -79,4 +86,23 @@ footer p {
   margin-right: 20px;
   border: 10px solid #551f1f;
   box-shadow: #000000 0px 0px 10px;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #ffffff;
+  color: #551f1f;
+  padding: 10px 20px;
+  border: 5px solid #b53636;
+  border-radius: 5px;
+  box-shadow: #000000 0px 0px 10px;
+  font-size: 16px;
+}
+
+#back-to-top:hover {
+  background: #b53636;
+  color: #ffffff;
+  border-color: #932c2c;
 }
