@@ -1,4 +1,6 @@
+/* This code styles the entire page's content. */
 body {
+  /* Here, I chose the background color, text color, font family and margin for the whole page. The property margin: 0 auto; centers the content of the page and makes it so that the content doesn't touch the edges of the page. */
   background-color: #742222;
   color: #ffffff;
   font-family:
@@ -10,6 +12,7 @@ header {
   background-color: #551f1f;
 }
 
+/* The next blocks of code styles the headers and paragraphs on the webpage. */
 h1 {
   font-size: 40px;
   color: #ffffff;
@@ -37,38 +40,63 @@ li {
   color: #551f1f;
 }
 
+/* This code styles the navigation menu in the nav element. */
 nav ul {
+  /* This removes the bullet points from the list, adds some margin and padding around the list, and centers the text. */
   list-style-type: none;
   margin: 5px;
   padding: 5px;
   text-align: center;
 }
 
+/* This code styles the navigation links in the nav element. */
 nav ul li {
+  /* I made these elements inline so they will be arranged next to each other instead of on separate lines. */
   display: inline;
+  /* This gives the buttons a white background, a dark red border, padding around the text, and a small margin between them. */
   background-color: #ffffff;
-  color: #ffffff;
+  border: 5px solid #932c2c;
   padding: 5px 10px;
   margin: 0 0.5%;
-  border: 5px solid #932c2c;
 }
 
+/* This code styles the text of the navigation links to be dark red and have no text decoration. */
+nav ul li a {
+  color: #551f1f;
+  text-decoration: none;
+}
+
+/* This code changes the styling of the button when the user hovers over it. */
+nav ul li:hover {
+  background: #b53636;
+  border-color: #932c2c;
+}
+
+/* This code changes the color of the text when the user hovers over it. */
+nav ul li a:hover {
+  color: #ffffff;
+}
+
+/* This code makes it so that the main content doesn't touch the edges of the page and stops a bit before the edges. */
 main {
-  margin: 0 2.5%;
+  margin: 0 5%;
 }
 
+/* This code styles the footer of the page. */
 footer {
   background-color: #551f1f;
-  color: #ffffff;
   text-align: center;
   padding: 10px;
 }
 
+/* This code styles the text inside the footer. */
 footer p {
   color: #ffffff;
 }
 
+/* This code styles the content boxes on the page. */
 .content-box {
+  /* I made the boxes a flex container, so the main text, header, and image can be arranged next to each other in a box. */
   display: flex;
   border: 10px solid #551f1f;
   padding: 20px;
@@ -77,30 +105,45 @@ footer p {
   color: #551f1f;
 }
 
+/* The .box-text class is used for all the text inside the box, such as the header and paragraphs. */
 .box-text {
+  /* This makes the text take up all the available space in the box, and adds some padding around it. */
   flex: 1;
   padding: 20px;
 }
+
+/* The .box-image class is used for the image inside the box. */
 .box-image {
+  /* The justify-content: flex-end property is used to align the image to the 
+    right side of the box, and the margin-right property adds some space between 
+    the image and the edge of the box.*/
   justify-content: flex-end;
   margin-right: 20px;
+  /* This adds a border and a shadow to the image to make it stand out more. */
   border: 10px solid #551f1f;
   box-shadow: #000000 0px 0px 10px;
 }
 
+/* This code styles the Back to Top button. */
 #back-to-top {
+  /* This positions the button at the bottom right corner of the page at all times. */
   position: fixed;
   bottom: 30px;
   right: 30px;
+  /* This gives the button a white background, dark red text, a red border and a shadow. */
   background: #ffffff;
   color: #551f1f;
-  padding: 10px 20px;
   border: 5px solid #b53636;
   border-radius: 5px;
   box-shadow: #000000 0px 0px 10px;
+  /* This adds some padding and margin, removes text decorations and sets the font size for the text. */
+  padding: 10px 20px;
+  margin-bottom: 1.5%;
   font-size: 16px;
+  text-decoration: none;
 }
 
+/* This code changes the styling of the button when the user hovers over it. */
 #back-to-top:hover {
   background: #b53636;
   color: #ffffff;

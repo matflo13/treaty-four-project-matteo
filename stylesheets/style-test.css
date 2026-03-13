@@ -42,10 +42,10 @@ nav ul {
   text-align: center;
 }
 
-nav ul li {
+nav ul li a {
   display: inline;
   background-color: #ffffff;
-  color: #ffffff;
+  color: #551f1f;
   padding: 5px 10px;
   border: 5px solid #932c2c;
 }
