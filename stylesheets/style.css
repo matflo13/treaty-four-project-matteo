@@ -8,6 +8,10 @@ body {
   margin: 0 auto;
 }
 
+root {
+  --white-backdrop: whitesmoke;
+}
+
 header {
   background-color: #551f1f;
 }
@@ -15,7 +19,7 @@ header {
 /* The next blocks of code styles the headers and paragraphs on the webpage. */
 h1 {
   font-size: 40px;
-  color: #ffffff;
+  color: var(--white-backdrop);
   text-shadow: #000000 0px 0px 10px;
   text-align: center;
   padding: 20px;
@@ -24,7 +28,7 @@ h1 {
 
 h2 {
   font-size: 32px;
-  color: #ffffff;
+  color: var(--white-backdrop);
   text-shadow: #000000 0px 0px 10px;
   text-align: center;
 }
@@ -54,27 +58,26 @@ nav ul li {
   /* I made these elements inline so they will be arranged next to each other instead of on separate lines. */
   display: inline;
   /* This gives the buttons a white background, a dark red border, padding around the text, and a small margin between them. */
-  background-color: #ffffff;
+  background-color: var(--white-backdrop);
   border: 5px solid #932c2c;
   padding: 5px 10px;
   margin: 0 0.5%;
+  /* This makes the button change colors smoothly in 0.3s when the user hovers over it. */
+  transition: all 0.3s;
 }
 
 /* This code styles the text of the navigation links to be dark red and have no text decoration. */
 nav ul li a {
-  color: #551f1f;
+  color: whitesmoke;
   text-decoration: none;
 }
 
 /* This code changes the styling of the button when the user hovers over it. */
 nav ul li:hover {
   background: #b53636;
-  border-color: #932c2c;
-}
-
-/* This code changes the color of the text when the user hovers over it. */
-nav ul li a:hover {
-  color: #ffffff;
+  border-color: whitesmoke;
+  color: var(--white-backdrop);
+  font-size: 21px;
 }
 
 /* This code makes it so that the main content doesn't touch the edges of the page and stops a bit before the edges. */
@@ -91,7 +94,7 @@ footer {
 
 /* This code styles the text inside the footer. */
 footer p {
-  color: #ffffff;
+  color: var(--white-backdrop);
 }
 
 /* This code styles the content boxes on the page. */
@@ -103,6 +106,19 @@ footer p {
   margin: 20px 0;
   background-color: #ffffff;
   color: #551f1f;
+  /* This makes the box change sizes smoothly in 0.3s when the user hovers over it. */
+  transition: all 0.3s;
+}
+
+.content-box:nth-child(even) {
+  /* This makes every other box have the image on the left and the text on the right, instead of the normal setting of text on the left and image on the right. This just makes the website look a bit less repetitive. */
+  flex-direction: row-reverse;
+}
+
+.content-box:hover {
+  /* This adds a shadow and makes the box bigger when the user hovers over it. */
+  box-shadow: #000000 0px 0px 15px;
+  transform: scale(1.01);
 }
 
 /* The .box-text class is used for all the text inside the box, such as the header and paragraphs. */
@@ -128,7 +144,7 @@ footer p {
 #back-to-top {
   /* This positions the button at the bottom right corner of the page at all times. */
   position: fixed;
-  bottom: 30px;
+  bottom: 5px;
   right: 30px;
   /* This gives the button a white background, dark red text, a red border and a shadow. */
   background: #ffffff;
@@ -141,6 +157,8 @@ footer p {
   margin-bottom: 1.5%;
   font-size: 16px;
   text-decoration: none;
+  /* This makes the button change sizes smoothly in 0.3s when the user hovers over it. */
+  transition: all 0.3s;
 }
 
 /* This code changes the styling of the button when the user hovers over it. */
@@ -148,4 +166,5 @@ footer p {
   background: #b53636;
   color: #ffffff;
   border-color: #932c2c;
+  transform: scale(1.2);
 }
