@@ -129,7 +129,7 @@ footer p {
 }
 
 /* The .box-image class is used for the image inside the box. */
-.box-image {
+.content-box img {
   /* The justify-content: flex-end property is used to align the image to the 
     right side of the box, and the margin-right property adds some space between 
     the image and the edge of the box.*/
