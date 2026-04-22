@@ -3,6 +3,7 @@ body {
   /* Here, I chose the background color, text color, font family and margin for the whole page. The property margin: 0 auto; centers the content of the page and makes it so that the content doesn't touch the edges of the page. */
   background-color: #742222;
   color: #ffffff;
+  /* font-family is a list of fonts that the browser will try to use in order. If the first font, Gill Sans, isn't available, it will try to use Gill Sans MT, and so on for the rest of the list. If none of the font listed are supported, then the browser will just use the default serif or sans-serif font depending on what you put. */
   font-family:
     "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
   margin: 0 auto;
