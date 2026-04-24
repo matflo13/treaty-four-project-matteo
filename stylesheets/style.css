@@ -1,16 +1,36 @@
+/* 
+  This is my CSS stylesheet for my Treaty 4 Website. I chose to use a dark red, monochromatic color scheme 
+  in my design. I used red because it's a color that represents importance and strength, which could help 
+  bring attention to the impact of this treaty. Also, red can be associated with struggle, which reflects 
+  the challenges faced by Indigenous Peoples because of this treaty. Finally, in Indigenous cultures, red 
+  represents lifeblood and connection to ancestors. While the main background of the website is dark red, 
+  most of the screen is covered in a white background behind the text, which I would consider a light theme. 
+  I chose to use a light theme because there's a lot of text that should be read on my website. However, the 
+  darker red around the edges helps to frame the content and draw people in. For my fonts, I chose to use a 
+  sans-serif font for the headers and navigation menu, and a serif font for the paragraphs. This makes it so 
+  that the headers and nav bar, which users will see first, are more eye-catching and easier to read, while 
+  the paragraphs, which people will be reading for more time, seem more professional and trustworthy.
+*/
+
+* {
+  line-height: 140%;
+}
+
+html {
+  /* This sets the font size for the entire page to 62.5% of the default size, which is usually 16px. This makes it easier to use rem units for font sizes, since 1rem will now equal 10px. */
+  font-size: 62.5%;
+}
+
 /* This code styles the entire page's content. */
 body {
   /* Here, I chose the background color, text color, font family and margin for the whole page. The property margin: 0 auto; centers the content of the page and makes it so that the content doesn't touch the edges of the page. */
   background-color: #742222;
-  color: #ffffff;
+  color: whitesmoke;
   /* font-family is a list of fonts that the browser will try to use in order. If the first font, Gill Sans, isn't available, it will try to use Gill Sans MT, and so on for the rest of the list. If none of the font listed are supported, then the browser will just use the default serif or sans-serif font depending on what you put. */
   font-family:
     "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
   margin: 0 auto;
-}
-
-root {
-  --white-backdrop: whitesmoke;
+  font-size: 1.6rem;
 }
 
 header {
@@ -20,8 +40,8 @@ header {
 /* The next blocks of code styles the headers and paragraphs on the webpage. */
 h1 {
   font-size: 40px;
-  color: var(--white-backdrop);
-  text-shadow: #000000 0px 0px 10px;
+  color: whitesmoke;
+  text-shadow: #121212 0px 0px 10px;
   text-align: center;
   padding: 20px;
   margin-top: 0;
@@ -29,8 +49,8 @@ h1 {
 
 h2 {
   font-size: 32px;
-  color: var(--white-backdrop);
-  text-shadow: #000000 0px 0px 10px;
+  color: whitesmoke;
+  text-shadow: #121212 0px 0px 10px;
   text-align: center;
 }
 
@@ -41,7 +61,8 @@ h3 {
 
 p,
 li {
-  font-size: 20px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 16px;
   color: #551f1f;
 }
 
@@ -59,12 +80,18 @@ nav ul li {
   /* I made these elements inline so they will be arranged next to each other instead of on separate lines. */
   display: inline;
   /* This gives the buttons a white background, a dark red border, padding around the text, and a small margin between them. */
-  background-color: var(--white-backdrop);
+  background-color: #551f1f;
   border: 5px solid #932c2c;
   padding: 5px 10px;
   margin: 0 0.5%;
+  /* This sets the font for the text in the buttons and the font size. */
+  font-family:
+    "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+  font-size: 20px;
   /* This makes the button change colors smoothly in 0.3s when the user hovers over it. */
   transition: all 0.3s;
+  /* This makes it so that the user can't select the text in the buttons.*/
+  user-select: none;
 }
 
 /* This code styles the text of the navigation links to be dark red and have no text decoration. */
@@ -77,8 +104,16 @@ nav ul li a {
 nav ul li:hover {
   background: #b53636;
   border-color: whitesmoke;
-  color: var(--white-backdrop);
+  color: whitesmoke;
   font-size: 21px;
+}
+
+nav ul li:focus,
+nav ul li:active {
+  background: #551f1f;
+  border-color: #e27979;
+  color: whitesmoke;
+  font-size: 20px;
 }
 
 /* This code makes it so that the main content doesn't touch the edges of the page and stops a bit before the edges. */
@@ -95,7 +130,7 @@ footer {
 
 /* This code styles the text inside the footer. */
 footer p {
-  color: var(--white-backdrop);
+  color: whitesmoke;
 }
 
 /* This code styles the content boxes on the page. */
@@ -105,7 +140,7 @@ footer p {
   border: 10px solid #551f1f;
   padding: 20px;
   margin: 20px 0;
-  background-color: #ffffff;
+  background-color: whitesmoke;
   color: #551f1f;
   /* This makes the box change sizes smoothly in 0.3s when the user hovers over it. */
   transition: all 0.3s;
@@ -118,7 +153,7 @@ footer p {
 
 .content-box:hover {
   /* This adds a shadow and makes the box bigger when the user hovers over it. */
-  box-shadow: #000000 0px 0px 15px;
+  box-shadow: #121212 0px 0px 15px;
   transform: scale(1.01);
 }
 
@@ -135,10 +170,11 @@ footer p {
     right side of the box, and the margin-right property adds some space between 
     the image and the edge of the box.*/
   justify-content: flex-end;
+  align-items: center;
   margin-right: 20px;
   /* This adds a border and a shadow to the image to make it stand out more. */
   border: 10px solid #551f1f;
-  box-shadow: #000000 0px 0px 10px;
+  box-shadow: #121212 0px 0px 10px;
 }
 
 /* This code styles the Back to Top button. */
@@ -148,11 +184,11 @@ footer p {
   bottom: 5px;
   right: 30px;
   /* This gives the button a white background, dark red text, a red border and a shadow. */
-  background: #ffffff;
+  background: whitesmoke;
   color: #551f1f;
   border: 5px solid #b53636;
   border-radius: 5px;
-  box-shadow: #000000 0px 0px 10px;
+  box-shadow: #121212 0px 0px 10px;
   /* This adds some padding and margin, removes text decorations and sets the font size for the text. */
   padding: 10px 20px;
   margin-bottom: 1.5%;
@@ -165,7 +201,7 @@ footer p {
 /* This code changes the styling of the button when the user hovers over it. */
 #back-to-top:hover {
   background: #b53636;
-  color: #ffffff;
-  border-color: #932c2c;
-  transform: scale(1.2);
+  color: whitesmoke;
+  border-color: whitesmoke;
+  transform: scale(1.1);
 }
