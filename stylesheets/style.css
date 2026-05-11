@@ -24,7 +24,7 @@ html {
 /* This code styles the entire page's content. */
 body {
   /* Here, I chose the background color, text color, font family and margin for the whole page. The property margin: 0 auto; centers the content of the page and makes it so that the content doesn't touch the edges of the page. */
-  background-color: #742222;
+  background: linear-gradient(90deg, #7c2828, #932c2c);
   color: whitesmoke;
   /* font-family is a list of fonts that the browser will try to use in order. If the first font, Gill Sans, isn't available, it will try to use Gill Sans MT, and so on for the rest of the list. If none of the font listed are supported, then the browser will just use the default serif or sans-serif font depending on what you put. */
   font-family:
@@ -35,6 +35,20 @@ body {
 
 header {
   background-color: #551f1f;
+}
+
+#treaty-flag {
+  display: block;
+  border: 3px solid #932c2c;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  transition: all 0.3s;
+}
+
+#treaty-flag:hover {
+  border-color: whitesmoke;
+  box-shadow: #121212 0px 0px 10px;
+  transform: scale(1.03);
 }
 
 /* The next blocks of code styles the headers and paragraphs on the webpage. */
