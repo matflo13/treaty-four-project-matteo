@@ -130,6 +130,18 @@ nav ul li:active {
   font-size: 20px;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  text-align: center;
+  padding: 5px;
+  border: 3px solid #551f1f;
+}
+
 /* This code makes it so that the main content doesn't touch the edges of the page and stops a bit before the edges. */
 main {
   margin: 0 5%;
@@ -168,7 +180,7 @@ footer p {
 .content-box:hover {
   /* This adds a shadow and makes the box bigger when the user hovers over it. */
   box-shadow: #121212 0px 0px 15px;
-  transform: scale(1.01);
+  transform: scale(1.001);
 }
 
 /* The .box-text class is used for all the text inside the box, such as the header and paragraphs. */
@@ -179,7 +191,8 @@ footer p {
 }
 
 /* The .box-image class is used for the image inside the box. */
-.content-box img {
+.content-box img,
+.content-box a img {
   /* The justify-content: flex-end property is used to align the image to the 
     right side of the box, and the margin-right property adds some space between 
     the image and the edge of the box.*/
