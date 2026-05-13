@@ -80,3 +80,32 @@ footer p {
   border: 10px solid #551f1f;
   box-shadow: #000000 0px 0px 10px;
 }
+
+/* This code styles the Back to Top button. */
+#back-to-top {
+  /* This positions the button at the bottom right corner of the page at all times. */
+  position: fixed;
+  bottom: 5px;
+  right: 30px;
+  /* This gives the button a white background, dark red text, a red border and a shadow. */
+  background: whitesmoke;
+  color: #551f1f;
+  border: 5px solid #b53636;
+  border-radius: 5px;
+  box-shadow: #121212 0px 0px 10px;
+  /* This adds some padding and margin, removes text decorations and sets the font size for the text. */
+  padding: 10px 20px;
+  margin-bottom: 1.5%;
+  font-size: 16px;
+  text-decoration: none;
+  /* This makes the button change sizes smoothly in 0.3s when the user hovers over it. */
+  transition: all 0.3s;
+}
+
+/* This code changes the styling of the button when the user hovers over it. */
+#back-to-top:hover {
+  background: #b53636;
+  color: whitesmoke;
+  border-color: whitesmoke;
+  transform: scale(1.1);
+}

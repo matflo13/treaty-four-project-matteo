@@ -16,6 +16,12 @@
   line-height: 140%;
 }
 
+*:not(html, body, main, #back-to-top) {
+  /* Applies the fadeslideup animation to everything except the html, body, main, and back-to-top elements. */
+  opacity: 0;
+  animation: fadeslideup 1.3s cubic-bezier(0.19, 1.44, 0.45, 1.23) forwards;
+}
+
 html {
   /* This sets the font size for the entire page to 62.5% of the default size, which is usually 16px. This makes it easier to use rem units for font sizes, since 1rem will now equal 10px. */
   font-size: 62.5%;
@@ -40,12 +46,15 @@ header {
 #treaty-flag {
   display: block;
   border: 3px solid #932c2c;
+  /* This centers the image and adds some margin below it. */
   margin: 0 auto;
   margin-bottom: 50px;
+  /* This makes it so that it takes 0.3s for the image to animate when the user hovers over it. */
   transition: all 0.3s;
 }
 
 #treaty-flag:hover {
+  /* This adds a shadow, changes the border, and makes the image bigger when the user hovers over it. */
   border-color: whitesmoke;
   box-shadow: #121212 0px 0px 10px;
   transform: scale(1.03);
@@ -75,6 +84,12 @@ h3 {
 
 p,
 li {
+  /* 
+    This sets the font for all paragraphs and list items to be a serif font, 
+    which is usually considered to look more professional than a sans-serif font. 
+    I chose to use a serif font for the paragraphs because they are the main text
+    of the website, and I wanted them to look more trustworthy. 
+  */
   font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 16px;
   color: #551f1f;
@@ -223,12 +238,43 @@ footer p {
   text-decoration: none;
   /* This makes the button change sizes smoothly in 0.3s when the user hovers over it. */
   transition: all 0.3s;
+  animation: fade 1.3s ease-in-out forwards;
 }
 
 /* This code changes the styling of the button when the user hovers over it. */
 #back-to-top:hover {
+  /* This changes the background color, text color and border color of the button when the user hovers over it. */
   background: #b53636;
   color: whitesmoke;
   border-color: whitesmoke;
+  /* This makes the button bigger when the user hovers over it. */
   transform: scale(1.1);
+}
+
+/* loading animation */
+
+@keyframes fadeslideup {
+  /* 0% is the starting point of the animation. The following CSS properties are applied at the beginning of the animation. */
+  0% {
+    /* Makes the content invisible */
+    opacity: 0;
+    /* Moves all the content 20px from its original position */
+    transform: translateY(20px);
+  }
+  100% {
+    /* Makes the content fully visible */
+    opacity: 1;
+    /* Moves all the content back to its original position */
+    transform: translateY(0);
+  }
+}
+
+/* loading animation for backToTop */
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
