@@ -35,11 +35,13 @@ body {
   /* font-family is a list of fonts that the browser will try to use in order. If the first font, Gill Sans, isn't available, it will try to use Gill Sans MT, and so on for the rest of the list. If none of the font listed are supported, then the browser will just use the default serif or sans-serif font depending on what you put. */
   font-family:
     "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+  /* margin: 0 auto; centers the content of the page and makes it so that the content doesn't touch the edges of the page. */
   margin: 0 auto;
   font-size: 1.6rem;
 }
 
 header {
+  /* This sets the background color of the header to dark red. */
   background-color: #551f1f;
 }
 
@@ -64,9 +66,12 @@ header {
 h1 {
   font-size: 40px;
   color: whitesmoke;
+  /* This adds a shadow to the text to make it pop out more. */
   text-shadow: #121212 0px 0px 10px;
+  /* This centers the text and adds some padding around it. */
   text-align: center;
   padding: 20px;
+  /* This makes it so that the header has no space above it, which makes the website look cleaner. */
   margin-top: 0;
 }
 
@@ -120,6 +125,7 @@ nav ul li {
   /* This makes the button change colors smoothly in 0.3s when the user hovers over it. */
   transition: all 0.3s;
   /* This makes it so that the user can't select the text in the buttons.*/
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -137,6 +143,7 @@ nav ul li:hover {
   font-size: 21px;
 }
 
+/* This code changes the styling of the button when the user focuses on it using the tab key, and while the user is holding on link. */
 nav ul li:focus,
 nav ul li:active {
   background: #551f1f;
@@ -145,10 +152,12 @@ nav ul li:active {
   font-size: 20px;
 }
 
+/* This code removes the outer border from the table */
 table {
   border-collapse: collapse;
 }
 
+/* This code centers the text in each table cell, adds padding around it and adds borders to the table cells. */
 table,
 th,
 td {
